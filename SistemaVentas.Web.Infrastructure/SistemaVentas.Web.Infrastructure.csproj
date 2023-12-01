@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaVentas.Web.Models\SistemaVentas.Web.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Api.Web.WebApi.DTO">
+      <HintPath>..\Api.Web.WebApi.DTO.dll</HintPath>
+    </Reference>
+    <Reference Include="Api.Web.WebApi.Utilities">
+      <HintPath>..\Api.Web.WebApi.Utilities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

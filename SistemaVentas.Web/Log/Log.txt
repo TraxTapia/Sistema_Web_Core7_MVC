@@ -1,0 +1,58 @@
+30/11/2023 04:30:26.3026 p. m. | 405 Method Not Allowed 
+   at Api.Web.WebApi.Utilities.ApiServices.MessageFactory.SendRequest[T](String EndPointUrl, String Action, String Payload, HttpMethod Method)
+   at SistemaVentas.Web.Infrastructure.ClientApi.ClientApiServices.SaveProducto(SaveProductoRequestDTO _Request) in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web.Infrastructure\ClientApi\ClientApiServices.cs:line 214
+   at SistemaVentas.Web.Infrastructure.Core.CoreAdministration.SaveProducto(String EndPoint, SaveProductoRequestDTO _Request) in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web.Infrastructure\Core\CoreAdministration.cs:line 72
+30/11/2023 04:38:19.3819 p. m. | 405 Method Not Allowed 
+   at SistemaVentas.Web.Controllers.ProductosController.SaveProducto(SaveProductoRequestDTO _Request) in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 69
+30/11/2023 04:38:55.3855 p. m. | 405 Method Not Allowed 
+   at Api.Web.WebApi.Utilities.ApiServices.MessageFactory.SendRequest[T](String EndPointUrl, String Action, String Payload, HttpMethod Method)
+   at SistemaVentas.Web.Infrastructure.ClientApi.ClientApiServices.SaveProducto(SaveProductoRequestDTO _Request) in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web.Infrastructure\ClientApi\ClientApiServices.cs:line 214
+   at SistemaVentas.Web.Infrastructure.Core.CoreAdministration.SaveProducto(String EndPoint, SaveProductoRequestDTO _Request) in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web.Infrastructure\Core\CoreAdministration.cs:line 72
+30/11/2023 04:38:58.3858 p. m. | 405 Method Not Allowed 
+   at SistemaVentas.Web.Controllers.ProductosController.SaveProducto(SaveProductoRequestDTO _Request) in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 69
+30/11/2023 04:56:09.569 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 39
+30/11/2023 04:56:50.5650 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 39
+30/11/2023 04:59:10.5910 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
+30/11/2023 05:01:04.14 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
+30/11/2023 05:02:52.252 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
+30/11/2023 05:04:23.423 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
+30/11/2023 05:08:08.88 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
+30/11/2023 05:08:45.845 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
+30/11/2023 05:08:46.846 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
+30/11/2023 05:09:02.92 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
+30/11/2023 05:09:03.93 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
+30/11/2023 05:09:05.95 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
+30/11/2023 05:09:07.97 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
+30/11/2023 05:09:13.913 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
+30/11/2023 05:09:28.928 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
+30/11/2023 05:09:31.931 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
+30/11/2023 05:15:24.1524 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
+01/12/2023 11:03:11.311 a. m. | Parámetro inválido.
+   at SistemaVentas.Web.Controllers.ProductosController.DeleteProduct(Int32 _IdProducto)
+01/12/2023 11:03:41.341 a. m. | Parámetro inválido.
+   at SistemaVentas.Web.Controllers.ProductosController.DeleteProduct(Int32 _IdProducto)
+01/12/2023 11:06:17.617 a. m. | Parámetro inválido.
+   at SistemaVentas.Web.Controllers.ProductosController.DeleteProduct(Int32 _IdProducto)
+01/12/2023 11:08:28.828 a. m. | Parámetro inválido.
+   at SistemaVentas.Web.Controllers.ProductosController.DeleteProduct(Int32 _IdProducto)
+01/12/2023 11:12:00.120 a. m. | Parámetro inválido.
+   at SistemaVentas.Web.Controllers.ProductosController.DeleteProduct(Int32 _IdProducto)
+01/12/2023 11:13:26.1326 a. m. | Parámetro inválido.
+   at SistemaVentas.Web.Controllers.ProductosController.DeleteProduct(Int32 _IdProducto)

@@ -1,0 +1,68 @@
+﻿@model Api.Web.WebApi.DTO.Response.ListCategoriasResponseDTO
+
+@if (Model.Result.IsOK())
+{
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Activo</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var oItem in Model.Items)
+                    {
+                        <tr>
+                            <th>
+                                @oItem.IdCategoria
+                            </th>
+                            <th>
+                                @oItem.Descripcion
+                            </th>
+                          
+                            @if (oItem.Activo == false)
+                            {
+                                <th>
+                                    <span class="badge bg-danger ">Inactivo</span>
+                                </th>
+                            }
+                            else
+                            {
+                                <th>
+                                    <span class="badge bg-warning text-dark ">Activo</span>
+                                </th>
+                            }
+                            <th>
+                                <a href="#" onclick="" title="Agregar Producto">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="#" onclick="RemoveProduct(this);" title="Eliminar producto">
+                                    <i class="fa fa-times-circle icono-rojo" aria-hidden="true"></i>
+                                </a>
+                            </th>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+else
+{
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <div class="alert alert-danger" role="alert">
+                <p class="color-danger" style="text-align:center;"><b>@String.Join(",", Model.Result.Errors.Select(x => x.Message.ToString()))</b></p>
+
+            </div>
+        </div>
+    </div>
+}

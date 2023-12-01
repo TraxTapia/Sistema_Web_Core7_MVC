@@ -1,0 +1,76 @@
+﻿
+<style>
+    .modalHeader{
+        background-color: dodgerblue;
+    }
+    a:hover{
+        color:forestgreen
+    }
+
+    .icono-rojo {
+        color: red;
+    }
+    .icono-Success {
+        color: green;
+    }
+</style>
+@{
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-6">
+                <a href="#" onclick="OpenMdlProducts()" title="Agregar Producto" >
+                    <i class="fa fa-plus-circle icono-Success" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        <div id="divResult">
+        </div>
+       
+        @*modal agregar producto*@
+        <div class="modal " tabindex="-1" id="mdlAddProduct">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header modalHeader">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row g-3 needs-validation">                           
+                            <div class="col-md-6">
+                                <label for="txtDescripcion" class="form-label">Descripción</label>
+                                <input type="text" class="form-control" id="txtDescripcion">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="txtPrecioCompra" class="form-label">Precio Compra</label>
+                                <input type="text" class="form-control" id="txtPrecioCompra">
+                            </div>
+                            <div class="col-6">
+                                <label for="txtPrecioVenta" class="form-label">Precio Venta</label>
+                                <input type="text" class="form-control" id="txtPrecioVenta">
+                            </div>
+                            <div class="col-6">
+                                <label for="txtStock" class="form-label">Stock</label>
+                                <input type="text" class="form-control" id="txtStock" >
+                            </div>
+                            <div class="col-md-4">
+                                <label for="selectCategoria" class="form-label">Categoría</label>
+                                <select id="selectCategoria" class="form-select">
+                                   
+                                </select>
+                            </div>                           
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" onclick="ResetInputs();" data-bs-dismiss="modal">Close</button>
+                        <button type="button" onclick="SaveProduct();" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@section scripts{
+    <script src="~/ViewsScripts/Productos/Index.js"></script>
+}

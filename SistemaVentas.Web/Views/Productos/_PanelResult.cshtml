@@ -1,0 +1,106 @@
+﻿@model Api.Web.WebApi.DTO.Response.ListProductsResponseDTO
+
+@if (Model.Result.IsOK())
+{
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Código</th>
+                        <th scope="col">IdCategoria</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Precio Compra</th>
+                        <th scope="col">Precio Venta</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col"></th>
+                        @*<th scope="col">Activo</th>*@
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var oItem in Model.Items)
+                    {
+                        <tr>
+                            <td>
+                                @oItem.IdProducto
+                            </td>
+                            <td>
+                                @oItem.Codigo
+                            </td>
+                            <td>
+                                @oItem.IdCategoria
+                            </td>
+                            <td>
+                                @oItem.Categoria
+                            </td>
+                            <td>
+                                @oItem.Descripcion
+                            </td>
+                            <td>
+                                @oItem.PrecioCompra.ToString("C2")
+                            </td>
+                            <td>
+                                @oItem.PrecioVenta.ToString("C2")
+                            </td>
+                            <td>
+                                @oItem.Stock
+                            </td>
+                            @if (oItem.Stock <= 0)
+                            {
+                                <td>
+                                    <span class="badge bg-danger ">Agotado</span>
+                                </td>
+                            }
+                            else
+                            {
+                                <td>
+                                    <span class="badge bg-warning text-dark ">Surtido</span>
+                                </td>
+                            } 
+                           @* @if (oItem.)
+                            {
+                                <td>
+                                    <span class="badge bg-danger ">Agotado</span>
+                                </td>
+                            }
+                            else
+                            {
+                                <td>
+                                    <span class="badge bg-warning text-dark ">Surtido</span>
+                                </td>
+                            }*@
+                            <td>
+                                <a href="#" onclick="" title="Agregar Producto">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <button onclick="RemoveProduct(this)" title="Actualizar" class="btn btn-outline-danger"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+
+                                @*<a href="#" onclick="RemoveProduct(this)" title="Eliminar Producto">
+                                    <i class="fa fa-times-circle icono-rojo" aria-hidden="true"></i>
+                                </a>*@
+                            </td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+else
+{
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <div class="alert alert-danger" role="alert">
+                <p class="color-danger" style="text-align:center;"><b>@String.Join(",", Model.Result.Errors.Select(x => x.Message.ToString()))</b></p>
+
+            </div>
+        </div>
+    </div>
+}
