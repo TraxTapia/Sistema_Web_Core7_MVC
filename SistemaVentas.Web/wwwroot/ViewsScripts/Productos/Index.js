@@ -26,10 +26,11 @@ function GetProducts() {
     });
 }
 function OpenMdlProducts(button) {
-    SelectCategoria();
+    SelectCategoria(true);
     $('#mdlAddProduct').modal('show');
 }
-function SelectCategoria() {
+function SelectCategoria(isNew) {
+    let _isNew = isNew;
     return new Promise(function (resolve, reject) {
         $.ajax({
             url: '/Productos/GetCategorias',
@@ -37,9 +38,16 @@ function SelectCategoria() {
             dataType: 'json',
             data: '{}',
             success: function (data) {
-                for (var i = 0; i < data.items.length; i++) {
-                    $('#selectCategoria').append('<option value =' + data.items[i].idCategoria + '>' + data.items[i].descripcion + '</option>');
+                if (_isNew) {
+                    for (var i = 0; i < data.items.length; i++) {
+                        $('#selectCategoria').append('<option value =' + data.items[i].idCategoria + '>' + data.items[i].descripcion + '</option>');
+                    }
+                } else {
+                    for (var i = 0; i < data.items.length; i++) {
+                        $('#selectCategoriaEdit').append('<option value =' + data.items[i].idCategoria + '>' + data.items[i].descripcion + '</option>');
+                    }
                 }
+
                 resolve(true);
             },
             error: function (jqXHR, status, error) {
@@ -119,6 +127,7 @@ function ResetInputs() {
     _Stock.value = ''
     _Categoria.value = ''
 }
+
 function CloseMdlProducts() {
     $('#mdlAddProduct').modal('hide');
 }
@@ -252,12 +261,60 @@ function UpdateProduct() {
     });
 }
 function OpenEditMdlProducts(button) {
-    //SelectCategoria();
+    ResetSelectEdit();
+    SelectCategoria(false);
+    let _Descripcion = document.getElementById('txtDescripcionEdit');
+    let _PrecioCompra = document.getElementById('txtPrecioCompraEdit');
+    let _PrecioVenta = document.getElementById('txtPrecioVentaEdit');
+    let _Stock = document.getElementById('txtStockEdit');
+    let _Categoria = document.getElementById('selectCategoriaEdit');
+
+    let Id = $(button).closest('tr').find('td:eq(0)').text().trim();
+    let Codigo = $(button).closest('tr').find('td:eq(1)').text().trim();
+    let Categoria = parseInt($(button).closest('tr').find('td:eq(2)').text().trim());
+    let Descripcion = $(button).closest('tr').find('td:eq(4)').text().trim();
+    let PrecioCompra = $(button).closest('tr').find('td:eq(5)').text().trim().replace('$', '').replace(',', '');
+    let PrecioVenta = $(button).closest('tr').find('td:eq(6)').text().trim().replace('$', '').replace(',', '');
+    let Stock = $(button).closest('tr').find('td:eq(7)').text().trim();
+  
+    $('.Id').text(Id);
+    $('.Codigo').text(Codigo);
+    $('#selectCategoriaEdit').val(Categoria);
+    _Categoria.value = Categoria;
+    _Descripcion.value = Descripcion;
+    _PrecioCompra.value = PrecioCompra ;
+    _PrecioVenta.value = PrecioVenta;
+    _Stock.value = Stock;
     $('#mdlEditProduct').modal('show');
 }
 
+function CloseMdlEditProduct() {
+    ResetSelectEdit();
 
-
+    $('#mdlEditProduct').modal('show');
+}
+function ResetSelectEdit() {
+    $('#selectCategoriaEdit option').each(function () {
+        if ($(this).val() != '') {
+            $(this).remove();
+        }
+    });
+}
+function ResetInputsEdit() {
+    ResetSelectEdit();
+    document.getElementsByClassName("Id").value = "";
+    document.getElementsByClassName("Codigo").value = "";
+    let _Descripcion = document.getElementById('txtDescripcionEdit');
+    let _PrecioCompra = document.getElementById('txtPrecioCompraEdit');
+    let _PrecioVenta = document.getElementById('txtPrecioVentaEdit');
+    let _Stock = document.getElementById('txtStockEdit');
+    let _Categoria = document.getElementById('selectCategoriaEdit');
+    _Descripcion.value = ''
+    _PrecioCompra.value = ''
+    _PrecioVenta.value = ''
+    _Stock.value = ''
+    _Categoria.value = ''
+}
 
 
 //function SearchProveedor() {

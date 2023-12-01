@@ -56,3 +56,9 @@
    at SistemaVentas.Web.Controllers.ProductosController.DeleteProduct(Int32 _IdProducto)
 01/12/2023 11:13:26.1326 a. m. | Parámetro inválido.
    at SistemaVentas.Web.Controllers.ProductosController.DeleteProduct(Int32 _IdProducto)
+01/12/2023 02:54:06.546 p. m. | 400 Bad Request {"errors":{"Descripcion":["The Descripcion field is required."]},"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-dfb6212566769a38f9817e2342d56b1e-8dc8827f7c58a769-00"}
+   at Api.Web.WebApi.Utilities.ApiServices.MessageFactory.SendRequest[T](String EndPointUrl, String Action, String Payload, HttpMethod Method)
+   at SistemaVentas.Web.Infrastructure.ClientApi.ClientApiServices.SaveProducto(SaveProductoRequestDTO _Request) in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web.Infrastructure\ClientApi\ClientApiServices.cs:line 214
+   at SistemaVentas.Web.Infrastructure.Core.CoreAdministration.SaveProducto(String EndPoint, SaveProductoRequestDTO _Request) in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web.Infrastructure\Core\CoreAdministration.cs:line 72
+01/12/2023 02:54:06.546 p. m. | 400 Bad Request {"errors":{"Descripcion":["The Descripcion field is required."]},"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-dfb6212566769a38f9817e2342d56b1e-8dc8827f7c58a769-00"}
+   at SistemaVentas.Web.Controllers.ProductosController.SaveProducto(SaveProductoRequestDTO _Request) in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 81

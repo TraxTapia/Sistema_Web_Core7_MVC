@@ -1,15 +1,17 @@
 ﻿
 <style>
-    .modalHeader{
+    .modalHeader {
         background-color: dodgerblue;
     }
-    a:hover{
-        color:forestgreen
+
+    a:hover {
+        color: forestgreen
     }
 
     .icono-rojo {
         color: red;
     }
+
     .icono-Success {
         color: green;
     }
@@ -19,24 +21,24 @@
     <div class="container mt-3">
         <div class="row">
             <div class="col-md-6">
-                <a href="#" onclick="OpenMdlProducts()" title="Agregar Producto" >
+                <a href="#" onclick="OpenMdlProducts()" title="Agregar Producto">
                     <i class="fa fa-plus-circle icono-Success" aria-hidden="true"></i>
                 </a>
             </div>
         </div>
         <div id="divResult">
         </div>
-       
+
         @*modal agregar producto*@
         <div class="modal " tabindex="-1" id="mdlAddProduct">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header modalHeader">
-                        <h5 class="modal-title">Modal title</h5>
+                        <h5 class="modal-title">Nuevo Producto</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form class="row g-3 needs-validation">                           
+                        <form class="row g-3 needs-validation">
                             <div class="col-md-6">
                                 <label for="txtDescripcion" class="form-label">Descripción</label>
                                 <input type="text" class="form-control" id="txtDescripcion">
@@ -51,19 +53,65 @@
                             </div>
                             <div class="col-6">
                                 <label for="txtStock" class="form-label">Stock</label>
-                                <input type="text" class="form-control" id="txtStock" >
+                                <input type="text" class="form-control" id="txtStock">
                             </div>
                             <div class="col-md-4">
                                 <label for="selectCategoria" class="form-label">Categoría</label>
                                 <select id="selectCategoria" class="form-select">
-                                   
                                 </select>
-                            </div>                           
+                            </div>
                         </form>
 
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" onclick="ResetInputs();" data-bs-dismiss="modal">Close</button>
+                        <button type="button" onclick="SaveProduct();" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*modal editar producto*@
+        <div class="modal " tabindex="-1" id="mdlEditProduct">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header modalHeader">
+                        <h5 class="modal-title">Editar Producto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row g-3">
+                            <div class="col-md-3">
+                                <b style="font-size:small">Id</b> <p class="Id animated fadeInUp" style="font-size:small; color: firebrick"> </p>
+                            </div>
+                            <div class="col-md-5">
+                                <b style="font-size:small">Codigo</b> <p class="Codigo animated fadeInUp" style="font-size:small; color: firebrick"> </p>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="txtDescripcionEdit" class="form-label">Descripción</label>
+                                <input type="text" class="form-control" id="txtDescripcionEdit">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="txtPrecioCompraEdit" class="form-label">Precio Compra</label>
+                                <input type="text" class="form-control" id="txtPrecioCompraEdit">
+                            </div>
+                            <div class="col-6">
+                                <label for="txtPrecioVentaEdit" class="form-label">Precio Venta</label>
+                                <input type="text" class="form-control" id="txtPrecioVentaEdit">
+                            </div>
+                            <div class="col-6">
+                                <label for="txtStockEdit" class="form-label">Stock</label>
+                                <input type="text" class="form-control" id="txtStockEdit">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="selectCategoriaEdit" class="form-label">Categoría</label>
+                                <select id="selectCategoriaEdit" class="form-select">
+                                </select>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" onclick="CloseMdlEditProduct();" data-bs-dismiss="modal">Close</button>
                         <button type="button" onclick="SaveProduct();" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>

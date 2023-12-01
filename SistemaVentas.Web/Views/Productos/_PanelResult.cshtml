@@ -16,7 +16,7 @@
                         <th scope="col">Precio Venta</th>
                         <th scope="col">Stock</th>
                         <th scope="col"></th>
-                        @*<th scope="col">Activo</th>*@
+                        <th scope="col">Activo</th>
                         <th scope="col"></th>
                         <th scope="col"></th>
                     </tr>
@@ -60,33 +60,34 @@
                                 <td>
                                     <span class="badge bg-warning text-dark ">Surtido</span>
                                 </td>
-                            } 
-                           @* @if (oItem.)
+                            }
+                            @if (!oItem.Activo)
                             {
                                 <td>
-                                    <span class="badge bg-danger ">Agotado</span>
+                                    <span class="badge bg-danger ">Inactivo</span>
+                                </td>
+                                <td>
+                                    <button onclick="OpenEditMdlProducts(this)" title="Actualizar" class="btn btn-outline-success" disabled><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+
+                                </td>
+                                <td>
+                                    <button onclick="RemoveProduct(this)" title="Eliminar" class="btn btn-outline-danger" disabled><i class="fa fa-times-circle" aria-hidden="true"></i></button>
                                 </td>
                             }
                             else
                             {
                                 <td>
-                                    <span class="badge bg-warning text-dark ">Surtido</span>
+                                    <span class="badge bg-success ">Activo</span>
                                 </td>
-                            }*@
-                            <td>
-                                <a href="#" onclick="" title="Agregar Producto">
-                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                </a>
-                            </td>
-                            <td>
-                                <button onclick="RemoveProduct(this)" title="Actualizar" class="btn btn-outline-danger"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+                                <td>
+                                    <button onclick="OpenEditMdlProducts(this)" title="Actualizar" class="btn btn-outline-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
 
-                                @*<a href="#" onclick="RemoveProduct(this)" title="Eliminar Producto">
-                                    <i class="fa fa-times-circle icono-rojo" aria-hidden="true"></i>
-                                </a>*@
-                            </td>
+                                </td>
+                                <td>
+                                    <button onclick="RemoveProduct(this)" title="Eliminar" class="btn btn-outline-danger"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+                                </td>
+                            }
                         </tr>
-
                     }
                 </tbody>
             </table>
