@@ -85,17 +85,18 @@ function SaveProduct() {
 
     }
     $.ajax({
-        //beforeSend: function () {
-        //    //$.blockUI({
-        //    //    theme: true,
-        //    //    message: '<div class="row"><div class="col-lg-12"><br /><p style="font-size:small; text-align: center;"><img src="/SASE/Content/assets/img/loading.gif" style="width: 35px;" /></p><p style="font-size:small; text-align: center;">Buscando Registros Espere un Momento Por favor...</p><br /></div></div>',
-        //    //    baseZ: 10000
-        //    //});
-        //},
+        beforeSend: function () {
+            $.blockUI({
+                theme: true,
+                message: '<div class="row"><div class="col-md-12"><p><img src="img/loading.gif" style="width: 35px;" /><span> Espere por favor...</span></p></div></div>',
+                baseZ: 10000
+            });
+        },
         url: '/Productos/SaveProducto',
         type: 'Post',
         data: _Req,
         success: function (data) {
+            $.unblockUI();
             if (data.isOK) {
                 Swal.fire({
                     title: "success",
@@ -127,7 +128,6 @@ function ResetInputs() {
     _Stock.value = ''
     _Categoria.value = ''
 }
-
 function CloseMdlProducts() {
     $('#mdlAddProduct').modal('hide');
 }
@@ -159,18 +159,18 @@ function RemoveProduct(button) {
                     _IdProducto: parseInt($(button).closest('tr').find('td:eq(0)').text()),
                 };
                 $.ajax({
-                    //beforeSend: function () {
-                    //    $.blockUI({
-                    //        theme: true,
-                    //        message: '<div class="row"><div class="col-md-12"><p><img src="/SASE/Content/assets/img/loading.gif" style="width: 35px;" /><span> Espere por favor...</span></p></div></div>',
-                    //        baseZ: 100000
-                    //    });
-                    //},
+                    beforeSend: function () {
+                        $.blockUI({
+                            theme: true,
+                            message: '<div class="row"><div class="col-md-12"><p><img src="~/img/loading.gif" style="width: 35px;" /><span> Espere por favor...</span></p></div></div>',
+                            baseZ: 10000
+                        });
+                    },
                     url: '/Productos/DeleteProduct',
                     type: 'POST',
                     data: _Req,
                     success: function (data) {
-                        //$.unblockUI();
+                        $.unblockUI();
                         if (data.isOK) {
                             Swal.fire({
                                 text: "Registro Eliminado",
@@ -206,13 +206,17 @@ function RemoveProduct(button) {
     }
 }
 function UpdateProduct() {
-    let _Descripcion = document.getElementById('txtDescripcion');
-    let _PrecioCompra = document.getElementById('txtPrecioCompra');
-    let _PrecioVenta = document.getElementById('txtPrecioVenta');
-    let _Stock = document.getElementById('txtStock');
-    let _Categoria = document.getElementById('selectCategoria');
-    if (_Descripcion.value === '' || _PrecioCompra.value === ''
-        || _PrecioVenta.value === '' || _Stock.value === '' || _Categoria.value === '') {
+   let _Element = document.getElementsByClassName("Id")
+    let _IdCategoria = document.getElementById('selectCategoriaEdit');
+    let _Descripcion = document.getElementById('txtDescripcionEdit');
+    let _PrecioCompra = document.getElementById('txtPrecioCompraEdit');
+    let _PrecioVenta = document.getElementById('txtPrecioVentaEdit');
+    let _Stock = document.getElementById('txtStockEdit');
+    let _text = _Element[0];
+    let _Id = _text.innerHTML;
+
+    if (_Id === '',_Descripcion.value === '' || _PrecioCompra.value === ''
+        || _PrecioVenta.value === '' || _Stock.value === '' || _IdCategoria.value === '') {
 
         Swal.fire({
             title: "Warning!",
@@ -221,13 +225,12 @@ function UpdateProduct() {
         });
     }
     let _Req = {
-        IdProducto: _Descripcion.value,
+        IdProducto: parseInt(_Id),
         Descripcion: _Descripcion.value,
         PrecioCompra: _PrecioCompra.value,
         PrecioVenta: _PrecioVenta.value,
         Stock: _Stock.value,
-        IdCategoria: _Categoria.value
-
+        IdCategoria: _IdCategoria.value
     }
     $.ajax({
         //beforeSend: function () {
@@ -237,7 +240,7 @@ function UpdateProduct() {
         //    //    baseZ: 10000
         //    //});
         //},
-        url: '/Productos/SaveProducto',
+        url: '/Productos/UpdateProducto',
         type: 'Post',
         data: _Req,
         success: function (data) {
@@ -262,36 +265,35 @@ function UpdateProduct() {
 }
 function OpenEditMdlProducts(button) {
     ResetSelectEdit();
-    SelectCategoria(false);
-    let _Descripcion = document.getElementById('txtDescripcionEdit');
-    let _PrecioCompra = document.getElementById('txtPrecioCompraEdit');
-    let _PrecioVenta = document.getElementById('txtPrecioVentaEdit');
-    let _Stock = document.getElementById('txtStockEdit');
-    let _Categoria = document.getElementById('selectCategoriaEdit');
+    SelectCategoria(false).then(function (data) {
+        if (data) {
 
-    let Id = $(button).closest('tr').find('td:eq(0)').text().trim();
-    let Codigo = $(button).closest('tr').find('td:eq(1)').text().trim();
-    let Categoria = parseInt($(button).closest('tr').find('td:eq(2)').text().trim());
-    let Descripcion = $(button).closest('tr').find('td:eq(4)').text().trim();
-    let PrecioCompra = $(button).closest('tr').find('td:eq(5)').text().trim().replace('$', '').replace(',', '');
-    let PrecioVenta = $(button).closest('tr').find('td:eq(6)').text().trim().replace('$', '').replace(',', '');
-    let Stock = $(button).closest('tr').find('td:eq(7)').text().trim();
-  
-    $('.Id').text(Id);
-    $('.Codigo').text(Codigo);
-    $('#selectCategoriaEdit').val(Categoria);
-    _Categoria.value = Categoria;
-    _Descripcion.value = Descripcion;
-    _PrecioCompra.value = PrecioCompra ;
-    _PrecioVenta.value = PrecioVenta;
-    _Stock.value = Stock;
+
+            let Id = $(button).closest('tr').find('td:eq(0)').text().trim();
+            let Codigo = $(button).closest('tr').find('td:eq(1)').text().trim();
+            let Categoria = parseInt($(button).closest('tr').find('td:eq(2)').text().trim());
+            let Descripcion = $(button).closest('tr').find('td:eq(4)').text().trim();
+            let PrecioCompra = $(button).closest('tr').find('td:eq(5)').text().trim().replace('$', '').replace(',', '');
+            let PrecioVenta = $(button).closest('tr').find('td:eq(6)').text().trim().replace('$', '').replace(',', '');
+            let Stock = $(button).closest('tr').find('td:eq(7)').text().trim();
+
+            $('.Id').text(Id);
+            $('.Codigo').text(Codigo);
+            $('#txtDescripcionEdit').val(Descripcion);
+            $('#selectCategoriaEdit').val(Categoria);
+            $('#txtPrecioCompraEdit').val(PrecioCompra);
+            $('#txtPrecioVentaEdit').val(PrecioVenta);
+            $('#txtStockEdit').val(Stock);
+        }
+    }).catch(function (err) {
+        console.log("error promise ==>", err);
+    });
     $('#mdlEditProduct').modal('show');
 }
-
 function CloseMdlEditProduct() {
     ResetSelectEdit();
-
-    $('#mdlEditProduct').modal('show');
+    ResetInputsEdit();
+    $('#mdlEditProduct').modal('hide');
 }
 function ResetSelectEdit() {
     $('#selectCategoriaEdit option').each(function () {

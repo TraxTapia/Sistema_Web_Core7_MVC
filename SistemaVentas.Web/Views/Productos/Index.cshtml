@@ -45,15 +45,15 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="txtPrecioCompra" class="form-label">Precio Compra</label>
-                                <input type="text" class="form-control" id="txtPrecioCompra">
+                                <input type='number' class="form-control" step='0.00' id="txtPrecioCompra">
                             </div>
                             <div class="col-6">
                                 <label for="txtPrecioVenta" class="form-label">Precio Venta</label>
-                                <input type="text" class="form-control" id="txtPrecioVenta">
+                                <input type='number' class="form-control" step='0.00' id="txtPrecioVenta">
                             </div>
                             <div class="col-6">
                                 <label for="txtStock" class="form-label">Stock</label>
-                                <input type="text" class="form-control" id="txtStock">
+                                <input type="number" class="form-control" id="txtStock">
                             </div>
                             <div class="col-md-4">
                                 <label for="selectCategoria" class="form-label">Categoría</label>
@@ -71,12 +71,12 @@
             </div>
         </div>
         @*modal editar producto*@
-        <div class="modal " tabindex="-1" id="mdlEditProduct">
+        <div class="modal " tabindex="-1" id="mdlEditProduct " >
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header modalHeader">
                         <h5 class="modal-title">Editar Producto</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close" onclick="CloseMdlEditProduct()" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form class="row g-3">
@@ -111,8 +111,9 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" onclick="CloseMdlEditProduct();" data-bs-dismiss="modal">Close</button>
-                        <button type="button" onclick="SaveProduct();" class="btn btn-primary">Save changes</button>
+                        <button onclick="CloseMdlEditProduct()" type="button" class="btn btn-secondary animated fadeInUp" id="btnCancelarRegistro" data-dismiss="modal">Cancelar</button>
+
+                        <button type="button" onclick="UpdateProduct();" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
