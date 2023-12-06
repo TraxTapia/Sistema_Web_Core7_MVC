@@ -20,3 +20,76 @@ html {
 body {
   margin-bottom: 60px;
 }
+/*LOADER*/
+/** {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}*/
+/*
+body {
+    font-family: "Segoe UI", sans-serif;
+    line-height: 1.5;
+}*/
+
+/* Container */
+/*.container {
+    margin: 50px auto;
+    width: 95%;
+}*/
+
+/*@media (min-width: 700px) {
+    .container {
+        width: 60%;
+    }
+}*/
+
+/* Loading */
+.loading-container {
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease all 4s;
+}
+
+.loaded {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.loading {
+    border: 2px solid blue;
+    border-radius: 50%;
+    border-bottom: none;
+    border-left: none;
+    height: 50px;
+    width: 50px;
+    animation-name: loader;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* P */
+p {
+    margin-bottom: 12px;
+}
