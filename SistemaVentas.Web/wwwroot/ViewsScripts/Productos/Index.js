@@ -180,7 +180,7 @@ function RemoveProduct(button) {
                             GetProducts();
                         } else {
                             Swal.fire({
-                                text: data.Error,
+                                text: data.error,
                                 icon: "error",
                             });
                         }
@@ -223,6 +223,7 @@ function UpdateProduct() {
             text: "¡Los campos son requeridos!",
             icon: "warning"
         });
+        return
     }
     let _Req = {
         IdProducto: parseInt(_Id),

@@ -284,7 +284,7 @@ namespace SistemaVentas.Web.Infrastructure.ClientApi
             //    Response.Result.AddException(new Exception("Es necesario asignar una UrlEndPoint."));
             //    return Response;
             //}
-            if (!string.IsNullOrEmpty(_Descripcion))
+            if (string.IsNullOrEmpty(_Descripcion))
             {
                 Response.SetStatusCode(OperationResult.StatusCodesEnum.BAD_REQUEST);
                 Response.AddException(new Exception("Parámetro inválido."));
@@ -346,7 +346,7 @@ namespace SistemaVentas.Web.Infrastructure.ClientApi
             }
             MessageFactory _MessageFactory = new MessageFactory(this._Logger);
             string _Payload = Api.Web.WebApi.Utilities.Serializer.JsonSerializer.Serialize(_IdCategoria);
-            Response = _MessageFactory.SendRequest<OperationResult>(this.UrlEndPoint, "DeleteProduct", _Payload, HttpMethod.Post);
+            Response = _MessageFactory.SendRequest<OperationResult>(this.UrlEndPoint, "DeleteCategoria", _Payload, HttpMethod.Post);
 
             return Response;
         }

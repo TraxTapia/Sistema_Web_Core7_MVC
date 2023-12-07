@@ -22,7 +22,7 @@ namespace SistemaVentas.Web.Controllers
         {
             return View();
         }
-        public IActionResult GetProducts()
+        public IActionResult GetCategorias()
         {
             var _Result = new object();
             ListCategoriasResponseDTO _Response = new ListCategoriasResponseDTO();

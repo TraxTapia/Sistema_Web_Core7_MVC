@@ -98,3 +98,87 @@
    at SistemaVentas.Web.Infrastructure.Core.CoreAdministration.UpdateProducto(String EndPoint, UpdateProductoRequestDTO _Request) in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web.Infrastructure\Core\CoreAdministration.cs:line 92
 04/12/2023 11:45:49.4549 a. m. | 400 Bad Request {"errors":{"Descripcion":["The Descripcion field is required."]},"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-dea477a46ff1eb9669f7e26624bef70e-33bf2fca560268c8-00"}
    at SistemaVentas.Web.Controllers.ProductosController.UpdateProducto(UpdateProductoRequestDTO _Request) in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 103
+07/12/2023 01:10:27.1027 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
+07/12/2023 01:15:22.1522 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
+07/12/2023 01:34:08.348 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:34:20.3420 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:35:06.356 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:35:22.3522 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:35:27.3527 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:43:24.4324 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:44:28.4428 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:45:13.4513 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:45:53.4553 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:48:24.4824 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:49:43.4943 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:50:14.5014 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:50:32.5032 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:50:41.5041 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:51:45.5145 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:51:51.5151 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:51:59.5159 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:52:02.522 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:52:17.5217 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:52:20.5220 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:52:47.5247 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:52:53.5253 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:52:55.5255 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:54:02.542 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:54:09.549 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:54:13.5413 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:54:27.5427 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:57:18.5718 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:57:59.5759 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:58:33.5833 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 01:59:36.5936 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 02:01:47.147 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+07/12/2023 04:09:24.924 p. m. | Parámetro inválido.
+   at SistemaVentas.Web.Controllers.CategoriasController.SaveCategoria(String _Descripcion) in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 53
+07/12/2023 04:09:27.927 p. m. | Parámetro inválido.
+   at SistemaVentas.Web.Controllers.CategoriasController.SaveCategoria(String _Descripcion) in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 53
+07/12/2023 04:22:54.2254 p. m. | Parámetro inválido.
+   at SistemaVentas.Web.Controllers.CategoriasController.DeleteCategoria(Int32 _IdCategoria) in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 96
+07/12/2023 04:24:46.2446 p. m. | Parámetro inválido.
+   at SistemaVentas.Web.Controllers.CategoriasController.DeleteCategoria(Int32 _IdCategoria) in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 96
+07/12/2023 04:29:19.2919 p. m. | Parámetro inválido.
+   at SistemaVentas.Web.Controllers.CategoriasController.DeleteCategoria(Int32 _IdCategoria)
+07/12/2023 04:29:54.2954 p. m. | Parámetro inválido.
+   at SistemaVentas.Web.Controllers.CategoriasController.DeleteCategoria(Int32 _IdCategoria)
+07/12/2023 04:31:36.3136 p. m. | No se encontraron resultados a eliminar.
+   at SistemaVentas.Web.Controllers.CategoriasController.DeleteCategoria(Int32 _IdCategoria)
+07/12/2023 04:33:18.3318 p. m. | No se encontraron resultados a eliminar.
+   at SistemaVentas.Web.Controllers.CategoriasController.DeleteCategoria(Int32 _IdCategoria)

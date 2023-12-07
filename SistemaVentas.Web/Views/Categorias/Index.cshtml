@@ -1,5 +1,81 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿<div class="container mt-3">
+    @*   <div class="row">
+    <div class="col-md-12">
+    <div class="card  card border-primary mb-3">
+    <div class="card-header text-white bg-success">
+    Featured
+    </div>
+    <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    </div>
+    </div>
+    </div>*@
+    <div class="row">
+        <div class="col-md-6">
+            <p>
+                @* <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Link with href
+                </a>*@
+                <button class="btn btn-outline-primary" title="Nuevo Registro" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body border-primary">
+                    <form class="row row-cols-lg-auto g-3 align-items-center">
+                        <div class="col-12">
+                            <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
+                            <div class="input-group">
+                                <div class="input-group-text"><i class="fa fa-bookmark" aria-hidden="true"></i></div>
+                                <input type="text" class="form-control" id="txtDescripcion" placeholder="Descripción">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="button" onclick="SaveCategory(this)" class="btn btn-outline-primary"><i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+                            <button type="button" onclick="ResetInput(this)" class="btn btn-outline-warning"><i class="fa fa-eraser" aria-hidden="true"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="divResult">
+    </div>
+    @*EditModal*@
+    <!-- Button trigger modal -->
+    <div class="modal " tabindex="-1" id="MdlEditCategory">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Actualizar datos</h5>
+                    <button type="button" class="btn-close" onclick="CloseMdlEditCategory()" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-md-3">
+                            <b style="font-size:small">Id</b> <p class="Id animated fadeInUp" style="font-size:small; color: firebrick"> </p>
+                        </div>
+                        <div class="col-9">
+                            <label for="txtDescripcionEdit" class="form-label">Descripción</label>
+                            <input type="text" class="form-control" id="txtDescripcionEdit">
+                        </div>
+                    
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button onclick="CloseMdlEditCategory()" type="button" class="btn btn-secondary animated fadeInUp" id="btnCancelarRegistro" data-dismiss="modal">Cancelar</button>
+
+                    <button type="button" onclick="UpdateProduct();" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@section scripts{
+    <script src="~/ViewsScripts/Categorias/Index.js"></script>
 }
