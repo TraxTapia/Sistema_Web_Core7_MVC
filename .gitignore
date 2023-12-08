@@ -232,3 +232,4 @@ _Pvt_Extensions
 # FAKE - F# Make
 .fake/
 /SistemaVentas.Web/Log/Log.txt
+/SistemaVentas.Web/Log/Log.txt
