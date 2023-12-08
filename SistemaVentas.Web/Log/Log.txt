@@ -208,3 +208,5 @@
    at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
 08/12/2023 11:16:52.1652 a. m. | No se encontraron resultados.
    at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
+08/12/2023 02:21:11.2111 p. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
