@@ -2,6 +2,20 @@
 
 @if (Model.Result.IsOK())
 {
+    <div class="row  justify-content-end">
+        <div class="col-12">
+            <form class="row gy-2 gx-3  justify-content-end">
+                <div class="col-auto">
+                    <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
+                    <div class="input-group">
+                        <div class="input-group-text">@@</div>
+                        <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Username">
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
     <div class="row mt-3">
         <div class="col-md-12">
             <table class="table table-striped">
@@ -24,7 +38,7 @@
                             <td>
                                 @oItem.Descripcion
                             </td>
-                          
+
                             @if (oItem.Activo == false)
                             {
                                 <td>
@@ -44,7 +58,7 @@
                             </td>
                             <td>
                                 <a href="#" onclick="RemoveCategory(this);" title="Eliminar producto">
-                                    <i class="fa fa-times-circle"style="color:red" aria-hidden="true"></i>
+                                    <i class="fa fa-times-circle" style="color:red" aria-hidden="true"></i>
                                 </a>
                             </td>
                         </tr>
