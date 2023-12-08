@@ -234,25 +234,26 @@ function UpdateProduct() {
         IdCategoria: _IdCategoria.value
     }
     $.ajax({
-        //beforeSend: function () {
-        //    //$.blockUI({
-        //    //    theme: true,
-        //    //    message: '<div class="row"><div class="col-lg-12"><br /><p style="font-size:small; text-align: center;"><img src="/SASE/Content/assets/img/loading.gif" style="width: 35px;" /></p><p style="font-size:small; text-align: center;">Buscando Registros Espere un Momento Por favor...</p><br /></div></div>',
-        //    //    baseZ: 10000
-        //    //});
-        //},
+        beforeSend: function () {
+            $.blockUI({
+                theme: true,
+                message: '<div class="row"><div class="col-md-12"><p><img src="img/loading.gif" style="width: 35px;" /><span> Espere por favor...</span></p></div></div>',
+                baseZ: 10000
+            });
+        },
         url: '/Productos/UpdateProducto',
         type: 'Post',
         data: _Req,
         success: function (data) {
+            $.unblockUI();
             if (data.isOK) {
                 Swal.fire({
                     title: "success",
                     icon: "success"
                 });
-                ResetInputs();
+                ResetInputsEdit();
                 GetProducts();
-                CloseMdlProducts();
+                CloseMdlEditProduct();
             } else {
                 Swal.fire({
                     title: "Error!",

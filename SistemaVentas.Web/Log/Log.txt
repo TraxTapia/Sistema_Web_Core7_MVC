@@ -182,3 +182,29 @@
    at SistemaVentas.Web.Controllers.CategoriasController.DeleteCategoria(Int32 _IdCategoria)
 07/12/2023 04:33:18.3318 p. m. | No se encontraron resultados a eliminar.
    at SistemaVentas.Web.Controllers.CategoriasController.DeleteCategoria(Int32 _IdCategoria)
+08/12/2023 09:59:56.5956 a. m. | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Api.Web.WebApi.Utilities.ApiServices.MessageFactory.SendRequest[T](String EndPointUrl, String Action, String Payload, HttpMethod Method)
+   at SistemaVentas.Web.Infrastructure.ClientApi.ClientApiServices.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web.Infrastructure\ClientApi\ClientApiServices.cs:line 187
+   at SistemaVentas.Web.Infrastructure.Core.CoreAdministration.GetCategorias(String EndPoint) in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web.Infrastructure\Core\CoreAdministration.cs:line 52
+08/12/2023 09:59:56.5956 a. m. | One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. (localhost:44330))
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+08/12/2023 10:01:10.110 a. m. | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Api.Web.WebApi.Utilities.ApiServices.MessageFactory.SendRequest[T](String EndPointUrl, String Action, String Payload, HttpMethod Method)
+   at SistemaVentas.Web.Infrastructure.ClientApi.ClientApiServices.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web.Infrastructure\ClientApi\ClientApiServices.cs:line 187
+   at SistemaVentas.Web.Infrastructure.Core.CoreAdministration.GetCategorias(String EndPoint) in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web.Infrastructure\Core\CoreAdministration.cs:line 52
+08/12/2023 10:01:11.111 a. m. | One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. (localhost:44330))
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+08/12/2023 10:03:36.336 a. m. | No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Api.Web.WebApi.Utilities.ApiServices.MessageFactory.SendRequest[T](String EndPointUrl, String Action, String Payload, HttpMethod Method)
+   at SistemaVentas.Web.Infrastructure.ClientApi.ClientApiServices.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web.Infrastructure\ClientApi\ClientApiServices.cs:line 187
+   at SistemaVentas.Web.Infrastructure.Core.CoreAdministration.GetCategorias(String EndPoint) in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web.Infrastructure\Core\CoreAdministration.cs:line 52
+08/12/2023 10:03:36.336 a. m. | One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión. (localhost:44330))
+   at SistemaVentas.Web.Controllers.CategoriasController.GetCategorias() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\CategoriasController.cs:line 34
+08/12/2023 11:16:52.1652 a. m. | No se encontraron resultados.
+   at SistemaVentas.Web.Controllers.ProductosController.GetProducts() in C:\Users\ivan.tapia\source\repos\SistemaVentas.Web\SistemaVentas.Web\Controllers\ProductosController.cs:line 38
