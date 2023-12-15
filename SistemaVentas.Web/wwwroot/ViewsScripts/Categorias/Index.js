@@ -17,6 +17,34 @@ function GetCategory() {
             $.unblockUI();
             if (data != undefined || data != null) {
                 $('#divResult').html(data);
+                var table = document.getElementById("tblCategorias");
+
+                if (table != null || table != undefined) {
+                    var rows = table.getElementsByTagName("tr");
+                    input = document.getElementById("FilterTable");
+                    input.addEventListener("input", function () {
+                        var filter = input.value.toUpperCase();
+                        for (var i = 1; i < rows.length; i++) {
+                            var cells = rows[i].getElementsByTagName("td");
+                            var found = false;
+                            for (var j = 0; j < cells.length; j++) {
+                                var cell = cells[j];
+                                if (cell) {
+                                    var textValue = cell.textContent || cell.innerText;
+                                    if (textValue.toUpperCase().indexOf(filter) > -1) {
+                                        found = true;
+                                        break;
+                                    }
+                                }
+                            }
+                            if (found) {
+                                rows[i].style.display = "";
+                            } else {
+                                rows[i].style.display = "none";
+                            }
+                        }
+                    });
+                } 
             }
         },
     });
@@ -162,7 +190,7 @@ function UpdateCategory() {
         return
     }
     let _Req = {
-        IdProducto: parseInt(_Id),
+        IdCategoria: parseInt(_Id),
         Descripcion: _Descripcion.value
     }
     $.ajax({
@@ -177,13 +205,14 @@ function UpdateCategory() {
         type: 'Post',
         data: _Req,
         success: function (data) {
+            $.unblockUI();
             if (data.isOK) {
                 Swal.fire({
                     title: "success",
                     icon: "success"
                 });
-                ResetInputs();
-                GetProducts();
+                ResetInputsedit();
+                GetCategory();
                 CloseMdlEditCategory();
             } else {
                 Swal.fire({
@@ -208,7 +237,7 @@ function OpenMdlEdit(button) {
 function CloseMdlEditCategory() {
     //ResetSelectEdit();
     //ResetInputsEdit();
-    $('#mdlEditProduct').modal('hide');
+    $('#MdlEditCategory').modal('hide');
 }
 function ResetInputsedit() {
     document.getElementsByClassName("Id").value = "";
