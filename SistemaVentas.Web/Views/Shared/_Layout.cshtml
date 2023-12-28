@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SistemaVentas.Web.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/sweetalert2.min.css" />
-    <link  rel="stylesheet"href="~/css/font-awesome.min.css" />
-    <link  rel="stylesheet" href="~/css/jquery-ui.min.css"/>
-    <link rel ="stylesheet" href="~/css/jquery-ui.theme.css"  />
-    <link rel ="stylesheet" href="~/css/theme.css"/>
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="~/css/jquery-ui.theme.css" />
+    <link rel="stylesheet" href="~/css/theme.css" />
     @*<link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">*@
     @*<link rel="stylesheet" href="~/css/font-awesome.css"/>*@
 
 
 </head>
-<body>    
+<body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -28,14 +28,35 @@
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" asp-area=""  asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Productos" asp-action="Index">Products</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Inventario
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Productos" asp-action="Index">Productos</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Categorias" asp-action="Index">Categoria</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Categorias" asp-action="Index">Categoria</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Ventas
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Venta" asp-action="Index">Venta</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Categorias" asp-action="Index">Detalle</a>
+                                </li>
+                            </ul>
                         </li>
+                                                
                         <li class="nav-item">
                             <a class="nav-link" href="#">About</a>
                         </li>
@@ -70,7 +91,7 @@
     <partial name="_Preload"></partial>
     @*@Html.Partial("_Preload")*@
     <div class="container">
-       
+
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -83,6 +104,7 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/jquery-ui.min.js" asp-append-version="true"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/sweetalert2.min.js" asp-append-version="true"></script>
     <script src="~/js/jquery.blockUI.js" asp-append-version="true"></script>

@@ -117,6 +117,7 @@ function SaveProduct() {
     });
 }
 function ResetInputs() {
+    ResetSelect();
     let _Descripcion = document.getElementById('txtDescripcion');
     let _PrecioCompra = document.getElementById('txtPrecioCompra');
     let _PrecioVenta = document.getElementById('txtPrecioVenta');
@@ -127,6 +128,13 @@ function ResetInputs() {
     _PrecioVenta.value = ''
     _Stock.value = ''
     _Categoria.value = ''
+}
+function ResetSelect() {
+    $('#selectCategoria option').each(function () {
+        if ($(this).val() != '') {
+            $(this).remove();
+        }
+    });
 }
 function CloseMdlProducts() {
     $('#mdlAddProduct').modal('hide');
