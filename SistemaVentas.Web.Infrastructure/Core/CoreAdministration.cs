@@ -220,6 +220,26 @@ namespace SistemaVentas.Web.Infrastructure.Core
             }
             return Response;
         }
-        
+        public ListAutocompleteResponseDTO Autocomplete(string EndPoint, string _Search)
+        {
+            ListAutocompleteResponseDTO Response = new ListAutocompleteResponseDTO();
+            try
+            {
+                ClientApiServices _Client = new ClientApiServices(this._Logger);
+                _Client.SetEndPoint(EndPoint);
+                //if (!(Response.Result = _Client.SetToken(Claims)).IsOK())
+                //    return Response;
+                Response = _Client.Autocomplete(_Search);
+
+            }
+            catch (Exception ex)
+            {
+                this._Logger.LogError(ex);
+                Response.Result.SetStatusCode(OperationResult.StatusCodesEnum.INTERNAL_SERVER_ERROR);
+                Response.Result.AddException(ex);
+            }
+            return Response;
+        }
+
     }
 }

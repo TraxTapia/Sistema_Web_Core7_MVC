@@ -1,19 +1,129 @@
-﻿<div class="container mt-4">
-    <div class="row">
-      <div class="col-sm-8 mb-2">
-            <div class="card">
-                <div class="card-header">
-                    Productos
+﻿
+<style>
+    .ui-widget-content {
+        border: 1px solid #555;
+        background: #000 url("images/ui-bg_loop_25_000000_21x21.png") 50% 50% repeat;
+        color: #fff
+    }
+
+    .header-Card {
+        background: darkslategray;
+        color: white;
+        font-size: 16px;
+        font-family: ui-monospace;
+        color: white;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+
+
+
+    .Body-Card {
+        background: #007991; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #78ffd6, #007991); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #78ffd6, #007991); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+</style>
+
+<div class="row mt-3">
+    <div class="col-sm-6 mb-2">
+        <div class="card">
+            <div class="card-header header-Card">
+                Productos
+            </div>
+            <div class="card-body Body-Card">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" id="buscarProducto" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <label for="exampleFormControlInput1" class="form-label">Buscar Producto</label>
-                            <input type="text" class="form-control form-control-sm" id="buscarProducto" data-idproducto="0" />
+                <div class="row">
+                    <div class="col-sm-12 table-container">
+                        <table id="tabla" class="table table-stripet table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th style="width: 80px;">Cantidad</th>
+                                    <th>Precio</th>
+                                    <th>Total</th>
+                                    <th style="width: 50px;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div class="col-sm-6">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header header-Card">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <i class="fa fa-file-text" aria-hidden="true"></i>  Detalle Venta
+                            </div>
+                            <div class="col-sm-6 text-end">
+                                <p id="pVentaTotal" class="fw-bold m-0 p-0"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body Body-Card">                        
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="cbotipopago"><i class="fa fa-credit-card-alt" aria-hidden="true"> Tipo de Pago </i></label>
+                            <select class="form-select" id="cbotipopago">
+                                <option selected>-- Selecciona --</option>
+                                <option value="Efectivo">Efectivo</option>
+                                <option value="Tarjeta">Tarjeta</option>
+                                <option value="Movil">Movil</option>
+                            </select>
+                        </div>                      
+                        <hr />
+                        <div class="input-group input-group-sm mb-2">
+                            <span class="input-group-text ">Pago con</span>
+                            <input type="text" class="form-control form-control-sm" id="txtPagoCon">
+                        </div>
+                        <div class="input-group input-group-sm mb-2">
+                            <span class="input-group-text"><i class="fa fa-money" aria-hidden="true"> Cambio</i></span>
+                            <input type="text" class="form-control form-control-sm text-end fw-bold" id="txtCambio" disabled>
+                        </div>
+                        <div class="input-group input-group-sm mb-2">
+                            <span class="input-group-text">Sub Total</span>
+                            <input type="text" id="txtSubTotal" class="form-control form-control-sm text-end fw-bold" disabled>
+                        </div>
+                        <div class="input-group input-group-sm mb-2">
+                            <span class="input-group-text ">IGV (18%)</span>
+                            <input type="text" id="txtIgv" class="form-control form-control-sm text-end fw-bold" disabled>
+                        </div>
+                        <div class="input-group input-group-sm mb-2">
+                            <span class="input-group-text ">Total</span>
+                            <input type="text" id="txtTotal" class="form-control form-control-sm text-end fw-bold" disabled>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-sm-12 text-end">
+                                <button class="btn btn-primary me-2" id="btnTerminarVenta"><i class="bi bi-currency-dollar"></i> Terminar Venta</button>
+                                <button class="btn btn-danger" id="btnLimpiarLista"><i class="bi bi-x-circle-fill"></i> Limpiar Lista</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-      </div>
+        </div>
+
+
     </div>
 </div>
+@section scripts{
+    <script src="~/ViewsScripts/Venta/Index.js"></script>
+}

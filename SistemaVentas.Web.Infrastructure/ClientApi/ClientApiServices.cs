@@ -404,5 +404,32 @@ namespace SistemaVentas.Web.Infrastructure.ClientApi
 
             return Response;
         }
+        public ListAutocompleteResponseDTO Autocomplete(string _Search)
+        {
+            var Response = new ListAutocompleteResponseDTO();
+            //if (!this.HasToken())
+            //{
+            //    Response.Result.SetStatusCode(OperationResult.StatusCodesEnum.UNAUTHORIZED);
+            //    Response.Result.AddException(new Exception("No se encontro el Token de Autorización."));
+            //    return Response;
+            //}
+            //else if (!this.HasEndPoint())
+            //{
+            //    Response.Result.SetStatusCode(OperationResult.StatusCodesEnum.UNAUTHORIZED);
+            //    Response.Result.AddException(new Exception("Es necesario asignar una UrlEndPoint."));
+            //    return Response;
+            //}S
+            if (_Search == null)
+            {
+                Response.Result.SetStatusCode(OperationResult.StatusCodesEnum.BAD_REQUEST);
+                Response.Result.AddException(new Exception("Parámetro inválido."));
+                return Response;
+            }
+            MessageFactory _MessageFactory = new MessageFactory(this._Logger);
+            string _Payload = Api.Web.WebApi.Utilities.Serializer.JsonSerializer.Serialize(_Search);
+            Response = _MessageFactory.SendRequest<ListAutocompleteResponseDTO>(this.UrlEndPoint, "Autocomplete", _Payload, HttpMethod.Post);
+
+            return Response;
+        }
     }
 }
