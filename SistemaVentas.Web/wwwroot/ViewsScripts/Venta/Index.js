@@ -204,11 +204,12 @@ $("#btnTerminarVenta").on("click", function () {
 
     calcularCambio();
 
-
+    var _cbotipopago = document.getElementById("cbotipopago");
     let _Req = {
-        TipoPago: $("#cbotipopago option:selected").val(),
-        DocumentoCliente: $("#txtdocumentocliente").val("001"),
-        NombreCliente: $("#txtnombrecliente").val("Venta Online"),
+        //TipoPago: $("#cbotipopago option:selected").val(),
+        TipoPago: _cbotipopago.value,
+        DocumentoCliente:"001",
+        NombreCliente: "Venta Online",
         MontoPagoCon: parseFloat($("#txtPagoCon").val()),
         MontoCambio: parseFloat($("#txtCambio").val().replace("$ ", "", "gi")),
         MontoSubTotal: parseFloat($("#txtSubTotal").val().replace("$ ", "", "gi")),
@@ -225,20 +226,19 @@ $("#btnTerminarVenta").on("click", function () {
     }
 
 
-    jQuery.ajax({
+    $.ajax({
         //url: '@Url.Action("RegistrarVenta", "Home")',
         url: '/Venta/RegisterVentas',
         type: "POST",
         data: _Req,
         success: function (data) {
-            console.log(data)
-            return
-            if (data.respuesta !== "") {
+           
+            if (data) {
 
                 Swal.fire({
                     icon: 'success',
                     title: 'Venta Registrada',
-                    text: 'Nro Documento: ' + data.respuesta
+                    text: 'Nro Documento: ' + data.nroDocumento
                 })
 
                 $("#tabla tbody").html("");
